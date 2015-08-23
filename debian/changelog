@@ -1,0 +1,344 @@
+openimageio (1.5.17~dfsg0-1blankon1) tambora; urgency=medium
+
+  * Rebuild 
+
+ -- Mahyuddin <yudi.al@gmail.com>  Sun, 23 Aug 2015 21:08:26 +0700
+
+openimageio (1.5.17~dfsg0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Mon, 20 Jul 2015 14:01:21 +0200
+
+openimageio (1.5.16~dfsg0-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/copyright: unique reference for BSD licenses
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Tue, 16 Jun 2015 13:36:01 +0200
+
+openimageio (1.5.15~dfsg0-1) unstable; urgency=medium
+
+  * New upstream release and upload to unstable (Closes: #783840)
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Tue, 12 May 2015 17:37:10 +0200
+
+openimageio (1.5.11~dfsg0-1) experimental; urgency=medium
+
+  * New upstream release
+    - debian/: SONAME bump 1.4 => 1.5
+    - debian/rules: USE_FFMPEG Cmake flag disabled
+  * debian/rules: DEB_CXXFLAGS_MAINT_APPEND variable dropped
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Tue, 03 Feb 2015 09:03:29 +0100
+
+openimageio (1.4.16~dfsg0-1) experimental; urgency=medium
+
+  * New upstream release
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Fri, 23 Jan 2015 10:49:42 +0100
+
+openimageio (1.4.15~dfsg0-1) experimental; urgency=medium
+
+  * New upstream release
+  * debian/control: Uploader e-mail address updated
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Tue, 25 Nov 2014 12:15:35 +0100
+
+openimageio (1.4.14~dfsg0-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/control: S-V bump 3.9.5 => 3.9.6 (no changes needed)
+
+ -- Matteo F. Vescovi <mfvescovi@gmail.com>  Tue, 21 Oct 2014 09:57:21 +0200
+
+openimageio (1.4.13~dfsg0-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/control: Priority bump - extra => optional (Closes: #761333)
+  * debian/copyright: updated to fix lintian warnings
+
+ -- Matteo F. Vescovi <mfvescovi@gmail.com>  Mon, 15 Sep 2014 10:30:26 +0200
+
+openimageio (1.4.12~dfsg0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Matteo F. Vescovi <mfvescovi@gmail.com>  Fri, 01 Aug 2014 14:32:54 +0200
+
+openimageio (1.4.11~dfsg0-1) unstable; urgency=medium
+
+  * New upstream release
+    - debian/patches/: patchset updated
+      - 0003-Fix_FTBFS_big-endian.patch dropped (applied upstream)
+
+ -- Matteo F. Vescovi <mfvescovi@gmail.com>  Mon, 14 Jul 2014 14:26:56 +0200
+
+openimageio (1.4.10~dfsg0-2) unstable; urgency=medium
+
+  * debian/patches/: patchset updated
+    - 0003-Fix_FTBFS_big-endian.patch added (Closes: #752449)
+
+ -- Matteo F. Vescovi <mfvescovi@gmail.com>  Thu, 26 Jun 2014 12:07:22 +0200
+
+openimageio (1.4.10~dfsg0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Matteo F. Vescovi <mfvescovi@gmail.com>  Mon, 23 Jun 2014 15:00:36 +0200
+
+openimageio (1.4.9~dfsg0-2) unstable; urgency=medium
+
+  * debian/: standard gcc/g++ used for build (4.9) (Closes: #751327)
+  * debian/copyright: massive update (Closes: #751672)
+  * debian/patches/: patchset updated
+    - 0001-Fix_docs_generation.patch refreshed
+      (pdflatex run twice to allow index creation)
+    - 0002-Workaround_for_fonts_issue.patch modified
+      (drop platform check and use system fonts) (Closes: #751862)
+
+ -- Matteo F. Vescovi <mfvescovi@gmail.com>  Mon, 23 Jun 2014 12:36:36 +0200
+
+openimageio (1.4.9~dfsg0-1) unstable; urgency=medium
+
+  * New upstream release
+    - debian/: SONAME bump 1.3 => 1.4
+    - debian/rules: unused "USE_TBB" parameter dropped
+    - debian/rules: dh_auto_build commands switched
+    - debian/control: fonts-freefont-ttf b-dep added
+    - debian/patches/: patchset updated against v1.4.9
+      - 0001-Fix_docs_generation.patch refreshed
+      - 0002-Fix_IlmBase_issue.patch dropped (applied upstream)
+      - 0002-Workaround_for_fonts_issue.patch added
+      - 0003-Fix_multiarch_paths.patch dropped (applied upstream)
+      - 0004-Fix_FTBFS_on_atomic_operations.patch dropped
+        (modified and applied upstream)
+  * debian/control: libgif-dev b-dep added
+  * debian/control: libraw-dev b-dep added
+  * debian/control: libwebp-dev b-dep added
+
+ -- Matteo F. Vescovi <mfvescovi@gmail.com>  Wed, 11 Jun 2014 09:16:49 +0200
+
+openimageio (1.3.14~dfsg0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Matteo F. Vescovi <mfvescovi@gmail.com>  Tue, 20 May 2014 16:23:00 +0200
+
+openimageio (1.3.13~dfsg0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Matteo F. Vescovi <mfvescovi@gmail.com>  Thu, 03 Apr 2014 12:08:47 +0200
+
+openimageio (1.3.12~dfsg0-1) unstable; urgency=medium
+
+  * New upstream release
+    - debian/patches/: patchset updated
+      - 0005-Fix_FTBFS_due_to_OpenEXR.patch dropped
+        (applied upstream)
+  * debian/copyright: license issue fixed (Closes: #737986)
+  * debian/watch: exclude dev releases
+
+ -- Matteo F. Vescovi <mfvescovi@gmail.com>  Fri, 07 Feb 2014 16:07:26 +0100
+
+openimageio (1.3.11~dfsg0-1) unstable; urgency=low
+
+  * New upstream release
+    - debian/patches/: patchset refreshed against v1.3.11
+      - 0002-Fix_IlmBase_issue.patch refreshed
+      - 0005-Fix_FTBFS_due_to_OpenEXR.patch added
+    - debian/rules: --sourcedirectory parameter dropped
+  * debian/control: Uploader e-mail address updated
+  * debian/control: S-V bump 3.9.4 => 3.9.5 (no changes needed)
+  * debian/control: OpenColorIO support enabled (Closes: #721001)
+  * debian/: SONAME bump 1.2 => 1.3
+    - control: "libopenimageio1.2" => "libopenimageio1.3"
+    - libopenimageio1.2.install => libopenimageio1.3.install
+
+ -- Matteo F. Vescovi <mfvescovi@gmail.com>  Thu, 23 Jan 2014 09:27:38 +0100
+
+openimageio (1.2.3~dfsg0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Matteo F. Vescovi <mfv.debian@gmail.com>  Tue, 05 Nov 2013 09:36:03 +0100
+
+openimageio (1.2.2~dfsg0-1) unstable; urgency=low
+
+  * New upstream release
+    - debian/patches/: patchset updated
+      - 0005-Fix_compiler_error_on_mips.patch dropped
+        (applied upstream)
+
+ -- Matteo F. Vescovi <mfv.debian@gmail.com>  Thu, 03 Oct 2013 16:17:55 +0200
+
+openimageio (1.2.1~dfsg0-3) unstable; urgency=low
+
+  * debian/patches/: patchset updated
+    - 0005-Fix_compiler_error_on_mips.patch added
+
+ -- Matteo F. Vescovi <mfv.debian@gmail.com>  Wed, 14 Aug 2013 12:16:34 +0200
+
+openimageio (1.2.1~dfsg0-2) unstable; urgency=low
+
+  * Upload to unstable
+  * debian/manpages/: manpages updated (Closes: #719264)
+
+ -- Matteo F. Vescovi <mfv.debian@gmail.com>  Mon, 12 Aug 2013 10:01:05 +0200
+
+openimageio (1.2.1~dfsg0-1) experimental; urgency=low
+
+  * New upstream release
+    - debian/patches/: patchset updated
+      - 0001-Fix_docs_generation.patch refreshed
+      - 0005-Fix_FTBFS_due_to_bit_range_convert_issue.patch dropped
+        since applied upstream
+
+ -- Matteo F. Vescovi <mfv.debian@gmail.com>  Wed, 07 Aug 2013 10:01:24 +0200
+
+openimageio (1.2.0~dfsg0-2) experimental; urgency=low
+
+  * debian/patches/: patchset updated
+    - 0005-Fix_FTBFS_due_to_bit_range_convert_issue.patch added
+      Thanks to Larry Gritz (upstream devel) for the hint.
+
+ -- Matteo F. Vescovi <mfv.debian@gmail.com>  Tue, 16 Jul 2013 17:16:16 +0200
+
+openimageio (1.2.0~dfsg0-1) experimental; urgency=low
+
+  * New upstream release
+
+ -- Matteo F. Vescovi <mfv.debian@gmail.com>  Wed, 10 Jul 2013 10:18:29 +0200
+
+openimageio (1.2.0~beta2~dfsg0-1) experimental; urgency=low
+
+  * New upstream beta release
+
+ -- Matteo F. Vescovi <mfv.debian@gmail.com>  Fri, 05 Jul 2013 11:58:46 +0200
+
+openimageio (1.2.0~beta1~dfsg0-1) experimental; urgency=low
+
+  * New upstream beta release
+    - debian/: SONAME bump 1.1 => 1.2
+    - debian/patches/: patchset updated
+      - 0004-Fix_pause_issue.patch dropped (applied upstream)
+      - 0005-Fix_FTBFS_on_atomic_operations.patch renamed to #0004
+
+ -- Matteo F. Vescovi <mfv.debian@gmail.com>  Fri, 28 Jun 2013 10:17:26 +0200
+
+openimageio (1.1.13~dfsg0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Matteo F. Vescovi <mfv.debian@gmail.com>  Wed, 26 Jun 2013 09:18:27 +0200
+
+openimageio (1.1.12~dfsg0-1) unstable; urgency=low
+
+  * New upstream release
+  - debian/: +dsfgX => ~dfsgX repack renaming
+  - debian/watch: "+" => "~" mangle options updated
+  * debian/repack.sh: missing "gzip" filetype added
+  * debian/control: build-dependencies updated
+    - libboost-python-dev added
+    - libfreetype6-dev added
+    - libjpeg-dev removed
+    - libopencv-dev added
+    - libopenjpeg-dev added
+
+ -- Matteo F. Vescovi <mfv.debian@gmail.com>  Mon, 24 Jun 2013 11:42:16 +0200
+
+openimageio (1.1.11+dfsg0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Matteo F. Vescovi <mfv.debian@gmail.com>  Fri, 31 May 2013 10:47:52 +0200
+
+openimageio (1.1.10+dfsg0-3) unstable; urgency=low
+
+  * debian/: FTBFS on atomic operations fixed
+    - debian/control: b-dep on g++-4.7 was bumped to g++-4.8
+    - debian/rules: variables about g++ updated consequently
+    - debian/patches/0005-Fix_FTBFS_on_atomic_operations.patch:
+      added to adjust upstream source code using __atomic*
+      instead of deprecated __sync*
+    Thanks to Roland Stigge for the patch (Closes: #708929)
+
+ -- Matteo F. Vescovi <mfv.debian@gmail.com>  Tue, 21 May 2013 16:06:46 +0200
+
+openimageio (1.1.10+dfsg0-2) unstable; urgency=low
+
+  * Upload to unstable
+
+ -- Matteo F. Vescovi <mfv.debian@gmail.com>  Wed, 15 May 2013 17:48:52 +0200
+
+openimageio (1.1.10+dfsg0-1) experimental; urgency=low
+
+  * New upstream release
+
+ -- Matteo F. Vescovi <mfv.debian@gmail.com>  Tue, 23 Apr 2013 09:39:57 +0200
+
+openimageio (1.1.9+dfsg0-1) experimental; urgency=low
+
+  * New upstream release
+
+ -- Matteo F. Vescovi <mfv.debian@gmail.com>  Mon, 08 Apr 2013 11:35:10 +0200
+
+openimageio (1.1.8+dfsg0-1) experimental; urgency=low
+
+  * New upstream release
+    - debian/patches/: 0005-Fix_SHA1_issue.patch dropped
+      since it has been applied upstream
+
+ -- Matteo F. Vescovi <mfv.debian@gmail.com>  Wed, 20 Mar 2013 14:46:14 +0100
+
+openimageio (1.1.3+dfsg0-1) experimental; urgency=low
+
+  * New upstream release
+    + debian/: by-arch symbols files re-worked
+  * debian/control: new g++ b-dep to fix FTBFS (Closes: #687612)
+  * debian/watch: source path updated.
+    Thanks to Bart Martens (bartm) for the hint
+  * debian/control: libtiff-dev b-dep fixed
+  * debian/libopenimageio-dev.docs: README entry removed
+  * debian/patches/: #0002 patch dropped (applied upstream)
+  * debian/patches/: new #0002 and #0003 added.
+    Thanks to Pino Toscano (pino) for the huge help
+  * debian/patches/: #0004 added to fix "pause" issue.
+    Thanks to Luca Falavigna (dktrkranz) for the hint.
+  * debian/control: b-dep modified from gcc-4.7 to g++-4.7
+  * debian/rules: set export vars for gcc and g++ compilers
+  * debian/patches/: #0005 added to fix SHA1 issue
+  * debian/control: libilmbase-dev b-dep removed
+  * debian/: SONAME bump (1.0 => 1.1)
+  * debian/control: S-V 3.9.3 => 3.9.4 (no changes needed)
+
+ -- Matteo F. Vescovi <mfv.debian@gmail.com>  Thu, 10 Jan 2013 14:23:02 +0100
+
+openimageio (1.0.5+dfsg0-1) unstable; urgency=low
+
+  * New upstream release
+    + debian/: symbols files added
+  * debian/: updated manpages moved to "manpages" sub-dir.
+    Thanks to IRIE Shinsuke for the updated manpages (Closes: #673504)
+  * debian/patches/: #0002 added to fix FTBFS on Hurd.
+    Thanks to Pino Toscano (pino) for the hint
+
+ -- Matteo F. Vescovi <mfv.debian@gmail.com>  Tue, 05 Jun 2012 10:50:52 +0200
+
+openimageio (1.0.3+dfsg0-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/patches/:
+    + #0001/#0002 (doc generation) merged
+      Thanks to David Paleino (dapal) for the hint
+  * debian/rules: TBB support disabled
+  * debian/: 8 => 9 dh bump
+
+ -- Matteo F. Vescovi <mfv.debian@gmail.com>  Wed, 18 Apr 2012 14:45:11 +0200
+
+openimageio (1.0.0+dfsg0-1) unstable; urgency=low
+
+  * Initial release (Closes: #660984)
+
+ -- Matteo F. Vescovi <mfv.debian@gmail.com>  Sat, 10 Mar 2012 10:39:11 +0100

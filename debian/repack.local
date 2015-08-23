@@ -1,0 +1,2 @@
+SUFFIX=~dfsg0
+rm src/doc/openimageio.pdf

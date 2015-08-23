@@ -1,0 +1,40 @@
+#!/usr/bin/make -f
+export DH_OPTIONS
+export REPACK_SH=$(CURDIR)/debian/repack.sh
+export CC=gcc-4.9
+export CXX=g++-4.9
+
+INSTDIR=debian/tmp
+
+export DEB_LDFLAGS_MAINT_APPEND := -latomic
+
+%:
+	dh $@ --buildsystem=cmake \
+		  --builddirectory=build \
+		  --parallel
+
+override_dh_auto_configure:
+	dh_auto_configure -- \
+		-DCMAKE_SKIP_RPATH=ON \
+		-DUSE_FFMPEG=OFF \
+		-DUSE_FIELD3D=OFF \
+		-DUSE_PYTHON=OFF
+
+override_dh_auto_build:
+	dh_auto_build
+	$(MAKE) -C $(CURDIR)/src/doc/
+
+override_dh_auto_install:
+	dh_auto_install \
+		--buildsystem=cmake \
+		--destdir=$(INSTDIR)
+
+override_dh_auto_test:
+
+override_dh_install:
+	rm -f debian/tmp/usr/share/doc/openimageio/CHANGES
+	rm -f debian/tmp/usr/share/doc/openimageio/LICENSE
+	dh_install
+
+get-orig-source:
+	uscan --force-download

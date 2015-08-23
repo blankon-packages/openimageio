@@ -1,0 +1,36 @@
+From: David Paleino <dapal@debian.org>
+Date: Thu, 12 Jun 2014 09:07:12 +0200
+Subject: Fix_docs_generation
+
+Signed-off-by: Matteo F. Vescovi <mfvescovi@gmail.com>
+---
+ src/doc/CMakeLists.txt | 1 -
+ src/doc/Makefile       | 3 ++-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/doc/CMakeLists.txt b/src/doc/CMakeLists.txt
+index 5e2e986..d754dfc 100644
+--- a/src/doc/CMakeLists.txt
++++ b/src/doc/CMakeLists.txt
+@@ -1,7 +1,6 @@
+ project(documentation)
+ 
+ set (public_docs
+-     openimageio.pdf
+      "${OpenImageIO_SOURCE_DIR}/LICENSE"
+      "${OpenImageIO_SOURCE_DIR}/CHANGES"
+ )
+diff --git a/src/doc/Makefile b/src/doc/Makefile
+index 54ebc02..34be952 100644
+--- a/src/doc/Makefile
++++ b/src/doc/Makefile
+@@ -17,7 +17,8 @@ all: openimageio.pdf
+ 
+ 
+ # document making rule: use pdflatex
+-openimageio.pdf: *.tex *.aux figures.turd
++openimageio.pdf: *.tex figures.turd
++	${PDFLATEX} openimageio.tex
+ 	${PDFLATEX} openimageio.tex
+ 
+ 

@@ -1,0 +1,52 @@
+From: "Matteo F. Vescovi" <mfvescovi@gmail.com>
+Date: Mon, 23 Jun 2014 12:31:18 +0200
+Subject: Workaround_for_fonts_issue
+
+---
+ src/doc/Makefile         | 10 +---------
+ src/doc/makefigures.bash |  7 +++++--
+ 2 files changed, 6 insertions(+), 11 deletions(-)
+
+diff --git a/src/doc/Makefile b/src/doc/Makefile
+index 34be952..9bbf45a 100644
+--- a/src/doc/Makefile
++++ b/src/doc/Makefile
+@@ -1,14 +1,6 @@
+ .PHONY: figures
+ 
+-include ../make/detectplatform.mk
+-ifeq (${OIIOTOOL},)
+-  ifneq (${shell ls ./../../build/${platform}/src/oiiotool/oiiotool},)
+-    OIIOTOOL := "../../../build/${platform}/src/oiiotool/oiiotool"
+-  else
+-    OIIOTOOL := "../../../build/src/oiiotool/oiiotool"
+-  endif
+-endif
+-
++OIIOTOOL := "../../../build/src/oiiotool/oiiotool"
+ 
+ PDFLATEX := pdflatex -halt-on-error -interaction=errorstopmode 
+ 
+diff --git a/src/doc/makefigures.bash b/src/doc/makefigures.bash
+index 0ca5925..14c55ac 100755
+--- a/src/doc/makefigures.bash
++++ b/src/doc/makefigures.bash
+@@ -1,5 +1,8 @@
+ #!/bin/bash
+ 
++SERIF="/usr/share/fonts/truetype/freefont/FreeSerif.ttf"
++BOLD="/usr/share/fonts/truetype/freefont/FreeSansBold.ttf"
++
+ if [ ${OIIOTOOL} == "" ] ; then
+     OIIOTOOL=oiiotool
+ fi
+@@ -21,7 +24,7 @@ ${OIIOTOOL} grid-small.jpg --transpose -o transpose.jpg
+ ${OIIOTOOL} grid-small.jpg --cshift +70+30 -o cshift.jpg
+ ${OIIOTOOL} --pattern constant:color=1,0.7,0.7 320x240 3 --fill:color=1,0,0 50x100+50+75 --tocolorspace sRGB -o fill.jpg
+ ${OIIOTOOL} --pattern checker:color1=0.1,0.1,0.1:color2=0.4,0.4,0.4:width=32:height=32 320x240 3 --tocolorspace sRGB -o checker.jpg
+-${OIIOTOOL} --create 320x240 3 --text:x=25:y=50 "Hello, world" \
+-            --text:x=50:y=100:font="Arial Bold":color=1,0,0:size=30 "Go Big Red!" --tocolorspace sRGB -o text.jpg
++${OIIOTOOL} --create 320x240 3 --text:x=25:y=50:font=${SERIF} "Hello, world" \
++            --text:x=50:y=100:font=${BOLD}:color=1,0,0:size=30 "Go Big Red!" --tocolorspace sRGB -o text.jpg
+ #${OIIOTOOL} ../../../testsuite/oiiotool/tahoe-small.tif
+ 
