@@ -6,7 +6,6 @@ Uploaders: Matteo F. Vescovi <mfv@debian.org>
 Build-Depends:
  cmake,
  debhelper (>= 9),
- g++-4.9,
  libboost-filesystem-dev,
  libboost-python-dev,
  libboost-regex-dev,
@@ -34,11 +33,13 @@ Homepage: http://www.openimageio.org/
 Vcs-Git: git://anonscm.debian.org/pkg-phototools/openimageio.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-phototools/openimageio.git
 
-Package: libopenimageio1.5
+Package: libopenimageio1.5v5
 Architecture: any
 Depends:
  ${misc:Depends},
  ${shlibs:Depends}
+Conflicts: libopenimageio1.5
+Replaces: libopenimageio1.5
 Description: Library for reading and writing images - runtime
  OpenImageIO is a library for reading and writing images, and a bunch of
  related classes, utilities, and applications. Main features include:
@@ -82,7 +83,7 @@ Package: libopenimageio-dev
 Section: libdevel
 Architecture: any
 Depends:
- libopenimageio1.5 (= ${binary:Version}),
+ libopenimageio1.5v5 (= ${binary:Version}),
  ${misc:Depends}
 Description: Library for reading and writing images - development
  OpenImageIO is a library for reading and writing images, and a bunch of

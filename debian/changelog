@@ -1,8 +1,16 @@
-openimageio (1.5.17~dfsg0-1blankon1) tambora; urgency=medium
+openimageio (1.5.18~dfsg0-1+b1blankon1) tambora; urgency=medium
 
   * Rebuild 
 
- -- Mahyuddin <yudi.al@gmail.com>  Sun, 23 Aug 2015 21:08:26 +0700
+ -- Mahyuddin <yudi.al@gmail.com>  Sun, 06 Sep 2015 14:40:28 +0700
+
+openimageio (1.5.18~dfsg0-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/: gcc-4.9/g++-4.9 support dropped (Closes: #794702)
+  * debian/: fix g++-5 ABI transition issue (Closes: #797620)
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Tue, 01 Sep 2015 13:45:16 +0200
 
 openimageio (1.5.17~dfsg0-1) unstable; urgency=medium
 

@@ -1,8 +1,6 @@
 #!/usr/bin/make -f
 export DH_OPTIONS
 export REPACK_SH=$(CURDIR)/debian/repack.sh
-export CC=gcc-4.9
-export CXX=g++-4.9
 
 INSTDIR=debian/tmp
 

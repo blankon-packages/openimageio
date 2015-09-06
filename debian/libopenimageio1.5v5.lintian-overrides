@@ -1,0 +1,2 @@
+#g++-5 ABI transition
+libopenimageio1.5v5: package-name-doesnt-match-sonames libopenimageio1.5
